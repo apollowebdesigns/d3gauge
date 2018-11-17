@@ -155,6 +155,19 @@ var gauge = function(container, configuration) {
     that.render = render;
 
     function update(newValue, newConfiguration) {
+        if ( newConfiguration  !== undefined) {
+            configure(newConfiguration);
+        }
+        var ratio = scale(newValue);
+        var newAngle = config.minAngle + (ratio * range);
+        pointer.transition()
+            .duration(config.transitionMs)
+            .ease('elastic')
+            .attr('transform', 'rotate(' +newAngle +')');
+    }
+    that.update = update;
+
+    function updateBar(newValue, newConfiguration) {
         var num = Math.random() * 180;
         var numPi = Math.floor(num - 89) * (pi / 180);// Get value
         var start = numPi * Math.random();
@@ -180,17 +193,6 @@ var gauge = function(container, configuration) {
         cur_color = new_color;
         new_color = hold;
 
-
-        if ( newConfiguration  !== undefined) {
-            configure(newConfiguration);
-        }
-        var ratio = scale(newValue);
-        var newAngle = config.minAngle + (ratio * range);
-        pointer.transition()
-            .duration(config.transitionMs)
-            .ease('elastic')
-            .attr('transform', 'rotate(' +newAngle +')');
-
         function aTween(transition, newAngle) {
             console.log('what is the:');
             console.log(transition);
@@ -211,7 +213,7 @@ var gauge = function(container, configuration) {
             });
         }
     }
-    that.update = update;
+    that.updateBar = updateBar;
 
     configure(configuration);
 
@@ -234,6 +236,7 @@ function onDocumentReady() {
     function updateReadings() {
         // just pump in random data here...
         powerGauge.update(Math.random() * 10);
+        powerGauge.updateBar(Math.random() * 10);
     }
 
     // every few seconds update reading values
