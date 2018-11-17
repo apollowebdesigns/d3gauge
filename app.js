@@ -123,48 +123,6 @@ var gauge = function(container, configuration) {
             .style("fill", 'red')
             .attr("d", foregroundArc);
 
-
-        setInterval(function () {
-            var num = Math.random() * 180;
-            var numPi = Math.floor(num - 89) * (pi / 180);// Get value
-            if (num >= 121) {
-                new_color = 'red';
-            } else if (num >= 61) {
-                new_color = 'orange';
-            } else {
-                new_color = 'limegreen';
-            } // Get new color
-            // current.transition().text(Math.floor(num));
-            console.log(arcs);
-            that.arcs.transition().duration(750).styleTween("fill", function () {
-                return d3.interpolate(new_color, cur_color);
-            }).call(aTween, numPi);
-            // Set colors for next transition
-            hold = cur_color;
-            cur_color = new_color;
-            new_color = hold;
-        }, 3000);
-
-        function aTween(transition, newAngle) {
-            console.log('what is the:');
-            console.log(transition);
-            console.log(newAngle);
-            return transition.attrTween("d", function (d) {
-                console.log('what is d?');
-                console.log(d);
-                var newLowestAngle = Math.random() * newAngle;
-                var startInterpolate = d3.interpolate(d.startAngle, newLowestAngle);
-                var endInterpolate = d3.interpolate(d.endAngle, newAngle);
-                return function (t) {
-                    console.log('what is t?');
-                    console.log(t);
-                    d.startAngle = startInterpolate(t);
-                    d.endAngle = endInterpolate(t);
-                    return foregroundArc(d);
-                };
-            });
-        }
-
         var lg = svg.append('g')
             .attr('class', 'label')
             .attr('transform', centerTx);
@@ -197,6 +155,30 @@ var gauge = function(container, configuration) {
     that.render = render;
 
     function update(newValue, newConfiguration) {
+        var num = Math.random() * 180;
+        var numPi = Math.floor(num - 89) * (pi / 180);// Get value
+        var start = numPi * Math.random();
+        var diff = numPi - start;
+        var startAndEnd = {
+            start: start,
+            end: numPi
+        };
+        if (diff >= (30 / 360) * 2 * Math.PI) {
+            new_color = 'red';
+        } else if (diff >= (15 / 360) * 2 * Math.PI) {
+            new_color = 'orange';
+        } else {
+            new_color = 'limegreen';
+        } // Get new color
+        // current.transition().text(Math.floor(num));
+        console.log(arcs);
+        that.arcs.transition().duration(750).styleTween("fill", function () {
+            return d3.interpolate(new_color, cur_color);
+        }).call(aTween, startAndEnd);
+        // Set colors for next transition
+        hold = cur_color;
+        cur_color = new_color;
+        new_color = hold;
 
 
         if ( newConfiguration  !== undefined) {
@@ -208,6 +190,26 @@ var gauge = function(container, configuration) {
             .duration(config.transitionMs)
             .ease('elastic')
             .attr('transform', 'rotate(' +newAngle +')');
+
+        function aTween(transition, newAngle) {
+            console.log('what is the:');
+            console.log(transition);
+            console.log(newAngle);
+            return transition.attrTween("d", function (d) {
+                console.log('what is d?');
+                console.log(d);
+                var newLowestAngle = Math.random() * newAngle;
+                var startInterpolate = d3.interpolate(d.startAngle, newAngle.start);
+                var endInterpolate = d3.interpolate(d.endAngle, newAngle.end);
+                return function (t) {
+                    console.log('what is t?');
+                    console.log(t);
+                    d.startAngle = startInterpolate(t);
+                    d.endAngle = endInterpolate(t);
+                    return foregroundArc(d);
+                };
+            });
+        }
     }
     that.update = update;
 
