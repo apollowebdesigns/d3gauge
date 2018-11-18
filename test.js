@@ -10,7 +10,7 @@ function generateArc(svg) {
     var max = 180, min = 0, current = 10;
     var arc = d3.svg.arc().innerRadius(iR).outerRadius(oR).startAngle(-90 * (pi / 180)); // Arc Defaults
 // Place svg element
-//     var svg = d3.select("#power-gauge").append("svg:svg").attr("width", width).attr("height", height)
+//     var svg = d3.select("#power-Gauge").append("svg:svg").attr("width", width).attr("height", height)
         .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
     var background = svg.append("path").datum({endAngle: 90 * (pi / 180)}).style("fill", "#ddd").attr("d", arc);// Append background arc to svg
     var foreground = svg.append("path").datum({endAngle: -90 * (pi / 180)}).style("fill", cur_color).attr("d", arc); // Append foreground arc to svg
