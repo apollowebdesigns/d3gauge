@@ -1,5 +1,5 @@
 {
-  "name": "testd3",
+  "name": "d3-speedo-gauge",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server",
@@ -20,6 +20,5 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
-  "description": "",
-  "private": true
+  "description": ""
 }
