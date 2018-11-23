@@ -1,4 +1,7 @@
 import * as d3 from 'd3';
+import Bar from './bar/bar';
+import Pointer from "./pointer/pointer";
+import Labels from "./labels/labels";
 
 export default class Gauge {
     constructor (container, configuration){
@@ -46,6 +49,7 @@ export default class Gauge {
         this.cur_color = 'limegreen';
         this.max = 180;
         this.min = 0;
+        this.current = 10;
         this.current = 10;
 
         this.oR = 100;
@@ -102,10 +106,6 @@ export default class Gauge {
                 var ratio = d * (i+1);
                 return that.deg2rad(that.config.maxAngle);
             });
-
-        that.foregroundArc = d3.svg.arc()
-            .innerRadius(that.r - that.config.ringWidth - that.config.ringInset)
-            .outerRadius(that.r - that.config.ringInset);
     }
 
     centerTranslation() {
@@ -113,14 +113,22 @@ export default class Gauge {
         return 'translate('+ that.r +','+ that.r +')';
     }
 
-    centerTextTranslation(yOffset) {
-        var that = this;
-        return 'translate('+ that.r +','+ (that.r + yOffset)  +')';
-    }
-
     isRendered() {
         var that = this;
         return (that.svg !== undefined);
+    }
+
+    addArcToSvgParent(parentSvg) {
+        return parentSvg.append('g')
+            .attr('class', 'arc')
+            .attr('transform', this.centerTranslation())
+            .append("path")
+            .datum({
+                startAngle: -90 * (Math.PI / 180),
+                endAngle: -90 * (Math.PI / 180)
+            })
+            .style("fill", 'blue')
+            .attr("d", this.arc);
     }
 
     render(newValue) {
@@ -132,134 +140,17 @@ export default class Gauge {
             .attr('height', that.config.clipHeight)
             .append('g');
 
-        var centerTx = that.centerTranslation();
-        var centerText = that.centerTextTranslation();
-
-        that.arcs = that.svg.append('g')
-            .attr('class', 'arc')
-            .attr('transform', centerTx)
-            .append("path")
-            .datum({
-                startAngle: -90 * (Math.PI / 180),
-                endAngle: -90 * (Math.PI / 180)
-            })
-            .style("fill", 'red')
-            .attr("d", that.foregroundArc);
-
-        var currentFontSize = 50;
-
-        that.max = that.svg.append("text").attr("transform", that.centerTextTranslation(currentFontSize + 22))
-            .attr("text-anchor", "middle").style("font-family", "Helvetica").text(that.max);
-
-        that.min = that.svg.append("text").attr("transform", that.centerTextTranslation(currentFontSize + 44))
-            .attr("text-anchor", "middle").style("font-family", "Helvetica").text(that.min);
-
-        that.current = that.svg.append("text").attr("transform", that.centerTextTranslation(currentFontSize))
-            .attr("text-anchor", "middle").style("font-size", currentFontSize).style("font-family", "Helvetica").text(that.current);
-
-        var lg = that.svg.append('g')
-            .attr('class', 'label')
-            .attr('transform', centerTx);
-        lg.selectAll('text')
-            .data(that.ticks)
-            .enter().append('text')
-            .attr('transform', function(d) {
-                var ratio = that.scale(d);
-                var newAngle = that.config.minAngle + (ratio * that.range);
-                return 'rotate(' + newAngle +') translate(0,' +(that.config.labelInset - that.r) +')';
-            })
-            .text(that.config.labelFormat);
-
-        var lineData = [ [that.config.pointerWidth / 2, 0],
-            [0, -that.pointerHeadLength],
-            [-(that.config.pointerWidth / 2), 0],
-            [0, that.config.pointerTailLength],
-            [that.config.pointerWidth / 2, 0] ];
-        var pointerLine = d3.svg.line().interpolate('monotone');
-        var pg = that.svg.append('g').data([lineData])
-            .attr('class', 'pointer')
-            .attr('transform', centerTx);
-
-        that.pointer = pg.append('path')
-            .attr('d', pointerLine)
-            .attr('transform', 'rotate(' + that.config.minAngle +')');
-
-        that.update(newValue === undefined ? 0 : newValue);
+        that.addArcToSvgParent(that.svg);
+        that.arcs = new Bar(that.svg, that.config, that.r);
+        that.labels = new Labels(that.svg, that.config, that.ticks);
+        that.pointer = new Pointer(that.svg, that.config, that.r);
     }
 
-    update(newValue, newConfiguration) {
-        var that = this;
-        if ( newConfiguration  !== undefined) {
-            that.configure(newConfiguration);
-        }
-        var ratio = that.scale(newValue);
-        var newAngle = that.config.minAngle + (ratio * that.range);
-        that.pointer.transition()
-            .duration(that.config.transitionMs)
-            .ease('elastic')
-            .attr('transform', 'rotate(' + newAngle +')');
-
-        that.current.transition().text(that.rounder(newValue));
-    }
-
-    rounder(numb) {
-        return Math.round(numb * 100) / 100
-    }
-
-    convertScaleToRadians(value) {
-        var segmentOffset = 45;
-        var that = this;
-        var offset = 5;
-        var gaugeCustomDeg = 20;
-        var test = value - offset;
-        test /= gaugeCustomDeg;
-        return test * (that.config.maxAngle / segmentOffset) * that.pi;
+    update(newValue) {
+        this.pointer.update(newValue);
     }
 
     updateBar(newMax, newMin) {
-        var that = this;
-        var numPiEnd = that.convertScaleToRadians(newMax);// Get value
-        var numPiStart = that.convertScaleToRadians(newMin);// Get value
-        // var start = numPiEnd - 2;
-        var diff = Math.abs(numPiEnd) - Math.abs(numPiStart);
-        var startAndEnd = {
-            start: numPiStart,
-            end: numPiEnd
-        };
-        if (diff >= (30 / 360) * 2 * Math.PI) {
-            that.new_color = 'red';
-        } else if (diff >= (15 / 360) * 2 * Math.PI) {
-            that.new_color = 'orange';
-        } else {
-            that.new_color = 'limegreen';
-        }
-
-        that.min.transition().duration(750).styleTween("fill", function () {
-            return d3.interpolate(that.new_color, that.cur_color);
-        }).text("MIN: " + that.rounder(newMin));
-
-        that.max.transition().duration(750).styleTween("fill", function () {
-            return d3.interpolate(that.new_color, that.cur_color);
-        }).text("MAX: " + that.rounder(newMax));
-
-        that.arcs.transition().duration(750).styleTween("fill", function () {
-            return d3.interpolate(that.new_color, that.cur_color);
-        }).call(aTween, startAndEnd);
-        // Set colors for next transition
-        that.hold = that.cur_color;
-        that.cur_color = that.new_color;
-        that.new_color = that.hold;
-
-        function aTween(transition, newAngle) {
-            return transition.attrTween("d", function (d) {
-                var startInterpolate = d3.interpolate(d.startAngle, newAngle.start);
-                var endInterpolate = d3.interpolate(d.endAngle, newAngle.end);
-                return function (t) {
-                    d.startAngle = startInterpolate(t);
-                    d.endAngle = endInterpolate(t);
-                    return that.foregroundArc(d);
-                };
-            });
-        }
+        this.arcs.update(newMax, newMin);
     }
 }
