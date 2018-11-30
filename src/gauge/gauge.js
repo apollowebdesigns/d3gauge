@@ -118,7 +118,7 @@ export default class Gauge {
         return (that.svg !== undefined);
     }
 
-    addArcToSvgParent(parentSvg) {
+    addBackgroundArcToSvgParent(parentSvg) {
         return parentSvg.append('g')
             .attr('class', 'arc')
             .attr('transform', this.centerTranslation())
@@ -140,7 +140,6 @@ export default class Gauge {
             .attr('height', that.config.clipHeight)
             .append('g');
 
-        that.addArcToSvgParent(that.svg);
         that.arcs = new Bar(that.svg, that.config, that.r);
         that.labels = new Labels(that.svg, that.config, that.ticks);
         that.pointer = new Pointer(that.svg, that.config, that.r);

@@ -2,13 +2,913 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="784819ad-2fa6-4a80-a465-629c54eee0cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/make_gauge.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/step_definitions/my_steps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/csv2json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/csv2tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/dsv2dsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/dsv2json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json2csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json2dsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json2tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsv2csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsv2json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/commander/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/commander/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/commander/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/commander/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/dist/d3-array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/dist/d3-array.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/ascending.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/bisect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/bisector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/cross.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/descending.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/deviation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/extent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/histogram.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/max.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/mean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/median.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/merge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/pairs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/permute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/quantile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/scan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/shuffle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/sum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/threshold/freedmanDiaconis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/threshold/scott.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/threshold/sturges.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/ticks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/transpose.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/variance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/src/zip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-array/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/dist/d3-axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/dist/d3-axis.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/src/axis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/src/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-axis/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/dist/d3-brush.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/dist/d3-brush.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/src/brush.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/src/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/src/noevent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-brush/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/dist/d3-chord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/dist/d3-chord.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/src/chord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/src/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/src/ribbon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-chord/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/dist/d3-collection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/dist/d3-collection.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/entries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/keys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/nest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/src/values.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/yarn-error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-collection/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/dist/d3-color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/dist/d3-color.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/src/color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/src/cubehelix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/src/define.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/src/lab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/src/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-color/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/dist/d3-contour.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/dist/d3-contour.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/ascending.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/blur.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/contains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/contours.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/density.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/src/noop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-contour/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/dist/d3-dispatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/dist/d3-dispatch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/src/dispatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dispatch/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/dist/d3-drag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/dist/d3-drag.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/src/drag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/src/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/src/nodrag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/src/noevent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-drag/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/bin/dsv2dsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/bin/dsv2json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/bin/json2dsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/dist/d3-dsv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/dist/d3-dsv.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/src/csv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/src/dsv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/src/tsv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-dsv/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/dist/d3-ease.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/dist/d3-ease.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/back.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/bounce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/circle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/cubic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/elastic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/exp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/linear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/poly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/quad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/src/sin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-ease/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/dist/d3-fetch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/dist/d3-fetch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/blob.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/buffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/dsv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/src/xml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-fetch/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/dist/d3-force.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/dist/d3-force.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/center.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/collide.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/jiggle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/manyBody.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/radial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/simulation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/x.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/src/y.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-force/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/dist/d3-format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/dist/d3-format.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-AE.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-BH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-DJ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-DZ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-EG.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-EH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-ER.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-IL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-IQ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-JO.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-KM.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-KW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-LB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-LY.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-MA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-MR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-OM.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-PS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-QA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-SA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-SD.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-SO.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-SS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-SY.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-TD.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-TN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ar-YE.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ca-ES.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/cs-CZ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/de-CH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/de-DE.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/en-CA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/en-GB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/en-IN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/en-US.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/es-ES.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/es-MX.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/fi-FI.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/fr-CA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/fr-FR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/he-IL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/hu-HU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/it-IT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ja-JP.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ko-KR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/mk-MK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/nl-NL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/pl-PL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/pt-BR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/ru-RU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/sv-SE.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/uk-UA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/locale/zh-CN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/defaultLocale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/exponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatDecimal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatGroup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatNumerals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatPrefixAuto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatRounded.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatSpecifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatTrim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/formatTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/locale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/precisionFixed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/precisionPrefix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/src/precisionRound.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-format/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/dist/d3-geo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/dist/d3-geo.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/adder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/bounds.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/cartesian.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/centroid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/circle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/antimeridian.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/buffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/circle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/extent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/rectangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/clip/rejoin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/compose.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/contains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/distance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/graticule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/interpolate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/length.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/noop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/bounds.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/centroid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/measure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/path/string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/pointEqual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/polygonContains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/albers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/albersUsa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/azimuthal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/azimuthalEqualArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/azimuthalEquidistant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/conic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/conicConformal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/conicEqualArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/conicEquidistant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/cylindricalEqualArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/equalEarth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/equirectangular.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/fit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/gnomonic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/mercator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/naturalEarth1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/orthographic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/resample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/stereographic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/projection/transverseMercator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/rotation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/src/transform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-geo/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/dist/d3-hierarchy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/dist/d3-hierarchy.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/accessors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/cluster.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/ancestors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/count.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/descendants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/each.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/eachAfter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/eachBefore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/leaves.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/links.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/hierarchy/sum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/pack/enclose.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/pack/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/pack/siblings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/partition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/stratify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/binary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/dice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/resquarify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/round.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/slice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/sliceDice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/src/treemap/squarify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-hierarchy/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/dist/d3-interpolate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/dist/d3-interpolate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/basis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/basisClosed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/cubehelix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/date.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/discrete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/hcl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/hsl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/hue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/lab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/piecewise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/quantize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/rgb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/round.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/transform/decompose.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/transform/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/transform/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/value.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/src/zoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-interpolate/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/dist/d3-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/dist/d3-path.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/src/path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-path/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/dist/d3-polygon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/dist/d3-polygon.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/centroid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/contains.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/cross.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/hull.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/src/length.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-polygon/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/dist/d3-quadtree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/dist/d3-quadtree.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/add.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/cover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/extent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/find.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/quad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/quadtree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/remove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/root.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/size.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/visit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/visitAfter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/x.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/src/y.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-quadtree/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/dist/d3-random.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/dist/d3-random.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/bates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/defaultSource.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/exponential.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/irwinHall.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/logNormal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/normal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/src/uniform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-random/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/dist/d3-scale-chromatic.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Accent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Dark2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Paired.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Pastel1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Pastel2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Set1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Set2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/Set3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/categorical/category10.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/BrBG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/PRGn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/PiYG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/PuOr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/RdBu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/RdGy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/RdYlBu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/RdYlGn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/diverging/Spectral.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/ramp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/rampClosed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/BuGn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/BuPu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/GnBu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/OrRd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/PuBu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/PuBuGn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/PuRd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/RdPu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/YlGn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/YlGnBu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/YlOrBr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/YlOrRd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/cubehelix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/rainbow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/sinebow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-multi/viridis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-single/Blues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-single/Greens.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-single/Greys.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-single/Oranges.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-single/Purples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/src/sequential-single/Reds.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale-chromatic/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/dist/d3-scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/dist/d3-scale.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/band.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/continuous.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/diverging.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/linear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/log.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/nice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/ordinal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/pow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/quantile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/quantize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/sequential.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/threshold.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/tickFormat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/src/utcTime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-scale/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/dist/d3-selection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/dist/d3-selection.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/creator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/matcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/mouse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/namespace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/namespaces.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/point.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selectAll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/append.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/attr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/call.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/classed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/datum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/dispatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/each.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/empty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/enter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/exit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/insert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/lower.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/merge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/nodes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/on.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/property.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/raise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/remove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/selectAll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/size.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/sparse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selection/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/selectorAll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/sourceEvent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/touch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/touches.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/src/window.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-selection/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/dist/d3-shape.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/dist/d3-shape.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/arc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/areaRadial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/basis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/basisClosed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/basisOpen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/cardinal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/cardinalClosed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/cardinalOpen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/catmullRom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/catmullRomClosed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/catmullRomOpen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/linear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/linearClosed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/monotone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/natural.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/radial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/curve/step.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/descending.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/identity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/lineRadial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/link/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/noop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/offset/diverging.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/offset/expand.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/offset/none.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/offset/silhouette.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/offset/wiggle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/order/ascending.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/order/descending.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/order/insideOut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/order/none.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/order/reverse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/point.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/pointRadial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/stack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/circle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/cross.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/diamond.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/square.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/star.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/triangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/src/symbol/wye.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-shape/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/dist/d3-time-format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/dist/d3-time-format.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/ar-EG.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/ca-ES.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/cs-CZ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/da-DK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/de-CH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/de-DE.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/en-CA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/en-GB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/en-US.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/es-ES.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/es-MX.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/fi-FI.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/fr-CA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/fr-FR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/he-IL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/hu-HU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/it-IT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/ja-JP.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/ko-KR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/mk-MK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/nb-NO.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/nl-NL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/pl-PL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/pt-BR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/ru-RU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/sv-SE.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/tr-TR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/uk-UA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/locale/zh-CN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/src/defaultLocale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/src/isoFormat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/src/isoParse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/src/locale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time-format/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/dist/d3-time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/dist/d3-time.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/day.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/duration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/hour.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/interval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/millisecond.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/minute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/month.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/second.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/utcDay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/utcHour.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/utcMinute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/utcMonth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/utcWeek.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/utcYear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/week.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/src/year.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-time/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/dist/d3-timer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/dist/d3-timer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/src/interval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/src/timeout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/src/timer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-timer/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/dist/d3-transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/dist/d3-transition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/active.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/interrupt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/selection/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/selection/interrupt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/selection/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/attr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/attrTween.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/delay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/duration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/ease.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/interpolate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/merge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/on.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/remove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/schedule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/selectAll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/selection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/styleTween.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/src/transition/tween.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-transition/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/dist/d3-voronoi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/dist/d3-voronoi.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/Beach.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/Cell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/Circle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/Diagram.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/Edge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/RedBlackTree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/point.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/src/voronoi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-voronoi/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/dist/d3-zoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/dist/d3-zoom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/src/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/src/event.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/src/noevent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/src/transform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/src/zoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3-zoom/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/API.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/d3/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/d3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/dist/d3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/dist/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/dist/d3.node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/dist/package.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/d3/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/rollup.node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/d3/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/iconv-lite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/dash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/decode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/encode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/read-file-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/read-file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/write-file-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/lib/rw/write-file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/cat-async" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/cat-sync" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/encode-object-async" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/encode-object-sync" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/encode-string-async" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/encode-string-sync" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/encoding-async" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/encoding-sync" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/run-tests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/utf8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/wc-async" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/wc-sync" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/write-async" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rw/test/write-sync" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/safer-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safer-buffer/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gauge/labels/labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/labels/labels.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,59 +923,116 @@
     <session id="671237372">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="5" />
-          <entry key="project.open.time.6" value="4" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.5" value="6" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="babelrc" value="1" />
           <entry key="css" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="html" value="1" />
-          <entry key="js" value="6" />
+          <entry key="feature" value="1" />
+          <entry key="gitignore" value="2" />
+          <entry key="html" value="6" />
+          <entry key="js" value="20" />
           <entry key="json" value="1" />
+          <entry key="md" value="2" />
+          <entry key="png" value="1" />
+          <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="1" />
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="6" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Cucumber" value="1" />
+          <entry key="HTML" value="6" />
+          <entry key="Image" value="1" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="20" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="21" />
-          <entry key="html" value="44" />
-          <entry key="js" value="3351" />
-          <entry key="json" value="4" />
+          <entry key="feature" value="118" />
+          <entry key="gitignore" value="34" />
+          <entry key="html" value="45" />
+          <entry key="js" value="5566" />
+          <entry key="json" value="53" />
+          <entry key="md" value="147" />
+          <entry key="txt" value="170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="44" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="3351" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Cucumber" value="118" />
+          <entry key="HTML" value="45" />
+          <entry key="JSON" value="53" />
+          <entry key="JavaScript" value="5566" />
+          <entry key="Markdown" value="147" />
+          <entry key="PLAIN_TEXT" value="204" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/index.html">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/my_steps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="345">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gauge/bar/bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gauge/labels/labels.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1035">
+              <caret line="69" column="48" lean-forward="true" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gauge/pointer/pointer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -83,44 +1040,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/mocks/config.mock.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3225">
-              <caret line="215" column="36" lean-forward="true" selection-start-line="215" selection-start-column="36" selection-end-line="215" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -128,8 +1067,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.babelrc">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -138,13 +1086,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>donut</find>
-      <find>minAngle</find>
-      <find>range</find>
-      <find>startAngle</find>
-      <find>attrTween</find>
-      <find>arc</find>
-      <find>configure</find>
       <find>d3.svg.arc()</find>
       <find>config</find>
       <find>var</find>
@@ -156,14 +1097,29 @@
       <find>rotate</find>
       <find>newAngle</find>
       <find>this</find>
-      <find>pointer</find>
-      <find>current</find>
+      <find>folder</find>
+      <find>d3.s</find>
+      <find>that</find>
+      <find>this.</find>
       <find>centerTextTranslation</find>
-      <find>centerText</find>
+      <find>current</find>
+      <find>devtool</find>
+      <find>this.min.transition().duration(750).styleTween</find>
+      <find>that.min</find>
+      <find>this.pointer</find>
+      <find>pointer</find>
+      <find>cur_color</find>
+      <find>addArcToSvgParent</find>
+      <find>ticks</find>
+      <find>length</find>
       <find>scale</find>
+      <find>range</find>
+      <find>this.r</find>
+      <find>centerText</find>
     </findStrings>
     <replaceStrings>
       <replace>that</replace>
+      <replace>this</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,16 +1132,30 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/jest.config.js" />
+        <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/tests/mocks/config.mock.js" />
+        <option value="$PROJECT_DIR$/tests/gauge.spec.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/gauge/pointer/pointer.js" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/src/gauge/bar/bar.js" />
+        <option value="$PROJECT_DIR$/src/gauge/gauge.js" />
+        <option value="$PROJECT_DIR$/features/make_gauge.feature" />
+        <option value="$PROJECT_DIR$/features/step_definitions/my_steps.js" />
+        <option value="$PROJECT_DIR$/src/gauge/labels/labels.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -199,10 +1169,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="31" />
-    <option name="y" value="155" />
-    <option name="width" value="1329" />
-    <option name="height" value="680" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="811" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -210,7 +1179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,29 +1189,62 @@
             <path>
               <item name="testd3" type="b2602c69:ProjectViewProjectNode" />
               <item name="testd3" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testd3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testd3" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="step_definitions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testd3" type="b2602c69:ProjectViewProjectNode" />
               <item name="testd3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="testd3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testd3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gauge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testd3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testd3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gauge" type="462c0819:PsiDirectoryNode" />
+              <item name="bar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testd3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testd3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gauge" type="462c0819:PsiDirectoryNode" />
+              <item name="labels" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -260,7 +1261,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.the centre should be 100, 100">
+    <configuration name="the centre should be 100, 100" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/gauge.spec.js" />
+      <test-names>
+        <test-name value="the centre should be 100, 100" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="two plus two is four" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/gauge.spec.js" />
+      <test-names>
+        <test-name value="two plus two is four" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start:dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -271,8 +1306,29 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.start:dev" />
+      <item itemvalue="Jest.two plus two is four" />
+      <item itemvalue="Jest.the centre should be 100, 100" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.the centre should be 100, 100" />
+        <item itemvalue="Jest.two plus two is four" />
         <item itemvalue="npm.start:dev" />
       </list>
     </recent_temporary>
@@ -297,30 +1353,118 @@
       <workItem from="1542454465980" duration="2053000" />
       <workItem from="1542483219285" duration="1935000" />
       <workItem from="1542528222122" duration="7963000" />
-      <workItem from="1542569503935" duration="793000" />
+      <workItem from="1542569503935" duration="2216000" />
+      <workItem from="1542578252043" duration="115000" />
+      <workItem from="1542655358374" duration="3978000" />
+      <workItem from="1542740480824" duration="327000" />
+      <workItem from="1542923271897" duration="1381000" />
+      <workItem from="1542995849715" duration="5743000" />
+      <workItem from="1543008862096" duration="243000" />
+      <workItem from="1543057958208" duration="1961000" />
+      <workItem from="1543260433451" duration="496000" />
+      <workItem from="1543512957965" duration="749000" />
+      <workItem from="1543602225820" duration="898000" />
     </task>
+    <task id="LOCAL-00001" summary="added more stuff">
+      <created>1542578339162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542578339162</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added tests">
+      <created>1542657783703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542657783703</updated>
+    </task>
+    <task id="LOCAL-00003" summary="removing files">
+      <created>1542657954150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542657954150</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added an index file">
+      <created>1542658406256</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542658406256</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated package name">
+      <created>1542658958411</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542658958411</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added in bars successfully and split out into seperate files">
+      <created>1543001791470</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543001791470</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 50m 44s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 51m 37s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 54m 50s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 55m 56s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 56m 04s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 56m 33s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 19h 57m 05s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 20h 01m 11s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="two_plus_two_is_four - 2018.11.19 at 20h 01m 42s.xml">
+      <configuration name="two plus two is four" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="the_centre_should_be_100,_100 - 2018.11.19 at 20h 02m 10s.xml">
+      <configuration name="the centre should be 100, 100" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23659000" />
+    <option name="totallyTimeSpent" value="40973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="155" width="1329" height="680" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="811" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49170125" visible="true" weight="0.17758985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="npm" order="3" sideWeight="0.50829875" side_tool="true" visible="true" weight="0.17758985" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32993197" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32962447" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27380952" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31571627" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -332,37 +1476,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added more stuff" />
+    <MESSAGE value="added tests" />
+    <MESSAGE value="removing files" />
+    <MESSAGE value="added an index file" />
+    <MESSAGE value="updated package name" />
+    <MESSAGE value="added in bars successfully and split out into seperate files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added in bars successfully and split out into seperate files" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/d3/dist/d3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="3536" column="23" selection-start-line="3536" selection-start-column="14" selection-end-line="3536" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/d3/dist/d3.js" />
     <entry file="file://$PROJECT_DIR$/dist/main.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -371,24 +1497,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.js">
+    <entry file="file://$PROJECT_DIR$/jest.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
+        <state relative-caret-position="210">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/test.js" />
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gauge.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gauge/pointer/pointer.ts" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="97" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gauge/gauge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/make_gauge.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/my_steps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3225">
-          <caret line="215" column="36" lean-forward="true" selection-start-line="215" selection-start-column="36" selection-end-line="215" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gauge/bar/bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gauge/pointer/pointer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/mocks/config.mock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gauge/labels/labels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="48" lean-forward="true" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
         </state>
       </provider>
     </entry>
