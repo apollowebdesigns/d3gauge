@@ -152,4 +152,8 @@ export default class Gauge {
     updateBar(newMax, newMin) {
         this.arcs.update(newMax, newMin);
     }
+
+    updateLabels(newMax, newMin){
+        this.labels.update(newMax, newMin);
+    }
 }

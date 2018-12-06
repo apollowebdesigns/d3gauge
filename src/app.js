@@ -16,8 +16,10 @@ function onDocumentReady() {
     function updateReadings() {
         // just pump in random data here...
         var newValue = Math.random() * 10;
+        var newValue = 5;
         powerGauge.update(newValue);
         powerGauge.updateBar(newValue, newValue - 1);
+        powerGauge.updateLabels(newValue, newValue - 1);
     }
 
     // every few seconds update reading values
