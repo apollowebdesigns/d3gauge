@@ -1,6 +1,6 @@
-import * as d3 from "d3";
+const d3 = require('d3');
 
-export default class Bar {
+module.exports = class Bar {
     constructor (parentSvg, config, r){
         this.pi = Math.PI;
         this.cur_color = 'limegreen';

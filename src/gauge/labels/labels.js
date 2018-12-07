@@ -1,6 +1,6 @@
-import * as d3 from "d3";
+const d3 = require('d3');
 
-export default class Labels {
+module.exports = class Labels {
     constructor (parentSvg, config, ticks){
         this.parentSvg = parentSvg;
         this.min = config.minValue;
@@ -75,30 +75,55 @@ export default class Labels {
             future: newTicks
         }
 
-        d3.interpolate(that.lg, newLabs());
+        // d3.interpolate(that.lg, newLabs());
+        //
+        //
+        // function newLabs() {
+        //     that.removeLabels();
+        //     that.scale = that.createScale({
+        //         minValue: 0,
+        //         maxValue: newMax
+        //     })
+        //     that.createLabelArc(that.parentSvg, that.config, newTicks);
+        // }
 
+        let ticksToUse;
 
-        function newLabs() {
-            that.removeLabels();
-            that.scale = that.createScale({
-                minValue: 0,
-                maxValue: newMax
-            })
-            that.createLabelArc(that.parentSvg, that.config, newTicks);
+        if(Math.max(...newTicks) > Math.max(...that.ticks)) {
+            ticksToUse = newTicks;
+            this.parentSvg.selectAll(".label-text")
         }
 
+        let newRange = newMax - this.config.minAngle;
 
-        // this.parentSvg.selectAll(".label-text")
-        //     .data(newTicks)
-        //     // .append('text')
-        //     .transition()
-        //     .duration(1000)
-        //     .attr("transform", function(d) {
-        //         var ratio = newScale(d);
-        //         var newAngle = that.config.minAngle + (ratio * that.range);
-        //         return 'rotate(' + newAngle +') translate(0,' +(that.config.labelInset - that.r) +')';
-        //     })
-        //     .text(that.config.labelFormat);
+        console.log('new ticks are');
+        console.log(this.parentSvg.selectAll(".label-text"));
+        console.log('what are the new ticks?');
+        console.log(newTicks);
+
+        // if new value greater than origional, append new blank text until the new value is reached
+
+
+        this.parentSvg.selectAll(".label-text")
+            .data(newTicks)
+            // .append('text')
+            .transition()
+            .duration(1000)
+            // d is the amount of text elements
+            .attr("transform", function(d) {
+                var ratio = newScale(d);
+                var newAngle = that.config.minAngle + (ratio * that.range);
+                console.log('what is d?');
+                console.log(d);
+                return 'rotate(' + newAngle +') translate(0,' +(that.config.labelInset - that.r) +')';
+            })
+            .attr("visibility", function(d) {
+                if (d > newMax) {
+                    return 'hidden';
+                }
+                return 'visible';
+            })
+            .text(that.config.labelFormat);
 
         // that.scale.range([0,1]).domain([0, newMax]);
         // this.parentSvg.selectAll(".label-text")

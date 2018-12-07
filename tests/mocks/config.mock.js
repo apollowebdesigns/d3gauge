@@ -1,4 +1,4 @@
-import * as d3 from 'd3';
+const d3 = require('d3');
 
 const config = {
     size						: 200,
@@ -26,6 +26,6 @@ const config = {
     arcColorFn					: d3.interpolateHsl(d3.rgb('#e8e2ca'), d3.rgb('#3e6c0a'))
 };
 
-export default function getConfig() {
+module.exports = function getConfig() {
     return config;
 };

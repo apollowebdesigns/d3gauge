@@ -1,4 +1,5 @@
-import Gauge from './gauge/gauge';
+const Gauge = require('./gauge/gauge');
+const d3 = require('d3');
 
 onDocumentReady();
 
@@ -11,15 +12,22 @@ function onDocumentReady() {
         maxValue: 10,
         transitionMs: 4000,
     });
-    powerGauge.render();
+    powerGauge.render(undefined);
+    powerGauge.render({
+        size: 300,
+        clipWidth: 300,
+        clipHeight: 300,
+        ringWidth: 60,
+        maxValue: 20,
+        transitionMs: 4000,
+    });
 
     function updateReadings() {
         // just pump in random data here...
         var newValue = Math.random() * 10;
-        var newValue = 5;
+        var newValue = 15;
         powerGauge.update(newValue);
         powerGauge.updateBar(newValue, newValue - 1);
-        powerGauge.updateLabels(newValue, newValue - 1);
     }
 
     // every few seconds update reading values

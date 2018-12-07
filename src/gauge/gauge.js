@@ -1,9 +1,9 @@
-import * as d3 from 'd3';
-import Bar from './bar/bar';
-import Pointer from "./pointer/pointer";
-import Labels from "./labels/labels";
+const d3 = require('d3');
+const Bar = require('./bar/bar');
+const Pointer = require("./pointer/pointer");
+const Labels = require("./labels/labels");
 
-export default class Gauge {
+module.exports = class Gauge {
     constructor (container, configuration){
         this.config = {
             size						: 200,
@@ -133,16 +133,22 @@ export default class Gauge {
 
     render(newValue) {
         var that = this;
-        that.svg = d3.select(that.container)
-            .append('svg:svg')
-            .attr('class', 'Gauge')
-            .attr('width', that.config.clipWidth)
-            .attr('height', that.config.clipHeight)
-            .append('g');
+        if(newValue !== undefined) {
+            that.configure(newValue)
+        } else {
+            that.svg = d3.select(that.container)
+                .append('svg:svg')
+                .attr('class', 'Gauge')
+                .attr('width', that.config.clipWidth)
+                .attr('height', that.config.clipHeight)
+                .append('g');
 
-        that.arcs = new Bar(that.svg, that.config, that.r);
-        that.labels = new Labels(that.svg, that.config, that.ticks);
-        that.pointer = new Pointer(that.svg, that.config, that.r);
+            that.arcs = new Bar(that.svg, that.config, that.r);
+            that.labels = new Labels(that.svg, that.config, that.ticks);
+            that.pointer = new Pointer(that.svg, that.config, that.r);
+        }
+
+
     }
 
     update(newValue) {

@@ -1,3 +1,3 @@
-import Gauge from './src/gauge/gauge';
+const Gauge = require('./src/gauge/gauge');
 
-export default Gauge;
+module.exports = Gauge;

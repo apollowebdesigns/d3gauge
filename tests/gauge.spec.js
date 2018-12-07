@@ -1,5 +1,5 @@
-import Gauge from './../src/gauge/gauge';
-import getConfig from './mocks/config.mock';
+const Gauge = require('./../src/gauge/gauge');
+const getConfig = require('./mocks/config.mock');
 
 test('the centre should be 100, 100', () => {
     let newGauge = new Gauge('#power-Gauge', getConfig());

@@ -1,6 +1,6 @@
-import * as d3 from "d3";
+const d3 = require('d3');
 
-export default class Pointer {
+module.exports = class Pointer {
     constructor (parentSvg, config, r){
         this.currentFontSize = 50;
         this.config = config;
