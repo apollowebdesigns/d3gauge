@@ -12,15 +12,7 @@ function onDocumentReady() {
         maxValue: 10,
         transitionMs: 4000,
     });
-    powerGauge.render(undefined);
-    powerGauge.render({
-        size: 300,
-        clipWidth: 300,
-        clipHeight: 300,
-        ringWidth: 60,
-        maxValue: 20,
-        transitionMs: 4000,
-    });
+    powerGauge.render();
 
     function updateReadings() {
         // just pump in random data here...

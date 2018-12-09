@@ -133,22 +133,16 @@ module.exports = class Gauge {
 
     render(newValue) {
         var that = this;
-        if(newValue !== undefined) {
-            that.configure(newValue)
-        } else {
-            that.svg = d3.select(that.container)
-                .append('svg:svg')
-                .attr('class', 'Gauge')
-                .attr('width', that.config.clipWidth)
-                .attr('height', that.config.clipHeight)
-                .append('g');
+        that.svg = d3.select(that.container)
+            .append('svg:svg')
+            .attr('class', 'Gauge')
+            .attr('width', that.config.clipWidth)
+            .attr('height', that.config.clipHeight)
+            .append('g');
 
-            that.arcs = new Bar(that.svg, that.config, that.r);
-            that.labels = new Labels(that.svg, that.config, that.ticks);
-            that.pointer = new Pointer(that.svg, that.config, that.r);
-        }
-
-
+        that.arcs = new Bar(that.svg, that.config, that.r);
+        that.labels = new Labels(that.svg, that.config, that.ticks);
+        that.pointer = new Pointer(that.svg, that.config, that.r);
     }
 
     update(newValue) {
