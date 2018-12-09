@@ -1,7 +1,23 @@
+const { spawn } = require('child_process');
 const {BeforeAll, AfterAll, Given, When, Then} = require('cucumber');
 const puppeteer = require('puppeteer');
 
+// set up worker threads for new communications
+const { MessageChannel } = require('worker_threads');
+const { port1, port2 } = new MessageChannel();
+
+let server;
+
 BeforeAll(async function () {
+    // start server
+    server = spawn('http-server', ['-p', 9000]);
+    server.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+    });
+
+
+    port1.on('message', (message) => console.log('a work', message));
+    port2.postMessage({ foo: 'bar' });
     browser = await puppeteer.launch();
     page = await browser.newPage();
     await page.goto('http://localhost:9000');
@@ -9,6 +25,7 @@ BeforeAll(async function () {
 });
 
 AfterAll(async function () {
+    server.kill('SIGINT');
     await browser.close();
 });
 
