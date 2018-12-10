@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/app.js',
     output: {
-        filename: 'main.js',
+        filename: 'gauge.min.js',
         path: path.resolve(__dirname, 'dist')
     },
     devtool: 'source-map',
