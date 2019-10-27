@@ -4,7 +4,7 @@ const d3 = require('d3');
 onDocumentReady();
 
 function onDocumentReady() {
-    var powerGauge = new Gauge('#power-Gauge', {
+    let powerGauge = new Gauge('#power-Gauge', {
         size: 300,
         clipWidth: 300,
         clipHeight: 300,
@@ -16,10 +16,9 @@ function onDocumentReady() {
 
     function updateReadings() {
         // just pump in random data here...
-        var newValue = Math.random() * 10;
-        var newValue = 15;
+        let newValue = Math.random() * 10;
         powerGauge.update(newValue);
-        powerGauge.updateBar(newValue, newValue - 1);
+        powerGauge.updateBar(newValue, newValue - 2);
     }
 
     // every few seconds update reading values

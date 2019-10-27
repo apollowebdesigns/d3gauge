@@ -1,14 +1,19 @@
 const d3 = require('d3');
 
 module.exports = class Bar {
-    constructor (parentSvg, config, r){
+    constructor (parentSvg, config, r, redBar, orangeBar, changeTextColor){
         this.pi = Math.PI;
         this.cur_color = 'limegreen';
+        this.cur_text_color = 'limegreen';
+        this.new_text_color = 'black';
+        this.changeTextColor = changeTextColor;
         this.max = 180;
         this.min = 0;
         this.current = 10;
         this.current = 10;
         this.currentFontSize = 50;
+        this.redBar = redBar;
+        this.orangeBar = orangeBar;
         this.parentSvg = parentSvg;
         this.config = config;
         this.r = r;
@@ -71,38 +76,53 @@ module.exports = class Bar {
     }
 
     update(newMax, newMin) {
-        var that = this;
-        var numPiEnd = this.convertScaleToRadians(newMax);// Get value
-        var numPiStart = this.convertScaleToRadians(newMin);// Get value
+        let that = this;
+        let numPiEnd = this.convertScaleToRadians(newMax);// Get value
+        let numPiStart = this.convertScaleToRadians(newMin);// Get value
         // var start = numPiEnd - 2;
-        var diff = Math.abs(numPiEnd) - Math.abs(numPiStart);
-        var startAndEnd = {
+        let diff = Math.abs(numPiEnd) - Math.abs(numPiStart);
+        let startAndEnd = {
             start: numPiStart,
             end: numPiEnd
         };
-        if (diff >= (30 / 360) * 2 * Math.PI) {
-            this.new_color = 'red';
-        } else if (diff >= (15 / 360) * 2 * Math.PI) {
-            this.new_color = 'orange';
+        if (diff >= that.redBar) {
+            that.new_color = 'red';
+        } else if (diff >= that.orangeBar) {
+            that.new_color = 'orange';
         } else {
-            this.new_color = 'limegreen';
+            that.new_color = 'limegreen';
         }
 
-        this.min.transition().duration(750).styleTween("fill", function () {
-            return d3.interpolate(this.new_color, this.cur_color);
-        }).text("MIN: " + this.rounder(newMin));
+        if (that.changeTextColor) {
+            that.min.transition().duration(750).styleTween("fill", function () {
+                return d3.interpolate(that.new_color, that.cur_color);
+            }).text("MIN: " + that.rounder(newMin));
 
-        this.max.transition().duration(750).styleTween("fill", function () {
-            return d3.interpolate(this.new_color, this.cur_color);
-        }).text("MAX: " + this.rounder(newMax));
+            that.max.transition().duration(750).styleTween("fill", function () {
+                return d3.interpolate(that.new_color, that.cur_color);
+            }).text("MAX: " + that.rounder(newMax));
+        } else {
+            let chanceColor = Math.random() * 10;
+            that.new_text_color = chanceColor > 5 ? 'grey': 'black';
+            that.min.transition().duration(750).styleTween("fill", function () {
+                return d3.interpolate(that.new_text_color, that.cur_text_color);
+            }).text("MIN: " + that.rounder(newMin));
 
-        this.svgRenderedArc.transition().duration(750).styleTween("fill", function () {
-            return d3.interpolate(this.new_color, this.cur_color);
+            that.max.transition().duration(750).styleTween("fill", function () {
+                return d3.interpolate(that.new_text_color, that.cur_text_color);
+            }).text("MAX: " + that.rounder(newMax));
+        }
+
+
+        that.svgRenderedArc.transition().duration(750).styleTween("fill", function () {
+            return d3.interpolate(that.new_color, that.cur_color);
         }).call(aTween, startAndEnd);
         // Set colors for next transition
-        this.hold = this.cur_color;
-        this.cur_color = this.new_color;
-        this.new_color = this.hold;
+        that.hold = that.cur_color;
+        that.hold_text = that.cur_text_color;
+        that.cur_color = that.new_color;
+        that.cur_text_color = that.new_text_color;
+        that.new_text_color = that.hold_text;
 
         function aTween(transition, newAngle) {
             return transition.attrTween("d", function (d) {
@@ -116,4 +136,4 @@ module.exports = class Bar {
             });
         }
     }
-}
+};

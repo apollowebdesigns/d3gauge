@@ -59,6 +59,9 @@ module.exports = class Gauge {
 
         this.container = container;
         this.configure(configuration);
+        this.redBar = (30 / 360) * 2 * Math.PI;
+        this.orangeBar = (15 / 360) * 2 * Math.PI;
+        this.changeTextColor = false;
     }
 
     deg2rad(deg) {
@@ -127,7 +130,7 @@ module.exports = class Gauge {
                 startAngle: -90 * (Math.PI / 180),
                 endAngle: -90 * (Math.PI / 180)
             })
-            .style("fill", 'blue')
+            .style("fill", 'red')
             .attr("d", this.arc);
     }
 
@@ -140,7 +143,7 @@ module.exports = class Gauge {
             .attr('height', that.config.clipHeight)
             .append('g');
 
-        that.arcs = new Bar(that.svg, that.config, that.r);
+        that.arcs = new Bar(that.svg, that.config, that.r, that.redBar, that.orangeBar, that.changeTextColor);
         that.labels = new Labels(that.svg, that.config, that.ticks);
         that.pointer = new Pointer(that.svg, that.config, that.r);
     }
