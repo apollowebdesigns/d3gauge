@@ -1,6 +1,6 @@
 {
   "name": "d3-speedo-gauge",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "jest",
