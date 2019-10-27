@@ -55,7 +55,7 @@ module.exports = class Gauge {
         this.oR = 100;
         this.iR = 100 - this.config.ringWidth;
 
-        this.donut = d3.layout.pie();
+        this.donut = d3.scaleLinear();
 
         this.container = container;
         this.configure(configuration);
@@ -88,14 +88,14 @@ module.exports = class Gauge {
         this.pointerHeadLength = Math.round(this.r * this.config.pointerHeadLengthPercent);
 
         // a linear scale that maps domain values to a percent from 0..1
-        this.scale = d3.scale.linear()
+        this.scale = d3.scaleLinear()
             .range([0,1])
             .domain([this.config.minValue, this.config.maxValue]);
 
         this.ticks = this.scale.ticks(this.config.majorTicks);
         this.tickData = d3.range(this.config.majorTicks).map(function() {return 1/that.config.majorTicks;});
 
-        that.arc = d3.svg.arc()
+        that.arc = d3.arc()
             .innerRadius(that.r - that.config.ringWidth - that.config.ringInset)
             .outerRadius(that.r - that.config.ringInset)
             .startAngle(function(d, i) {
@@ -156,4 +156,4 @@ module.exports = class Gauge {
     updateLabels(newMax, newMin){
         this.labels.update(newMax, newMin);
     }
-}
+};

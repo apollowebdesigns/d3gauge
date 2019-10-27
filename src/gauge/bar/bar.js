@@ -17,9 +17,9 @@ module.exports = class Bar {
         this.max = this.renderMax(parentSvg);
         this.min = this.renderMin(parentSvg);
     }
-    
+
     createGaugeArc() {
-        return d3.svg.arc()
+        return d3.arc()
             .innerRadius(this.r - this.config.ringWidth - this.config.ringInset)
             .outerRadius(this.r - this.config.ringInset);
     }
@@ -28,7 +28,7 @@ module.exports = class Bar {
         var that = this;
         return 'translate('+ that.r +','+ that.r +')';
     }
-    
+
     addArcToSvgParent(parentSvg) {
         return parentSvg.append('g')
             .attr('class', 'arc')
@@ -59,12 +59,12 @@ module.exports = class Bar {
         var that = this;
         return 'translate('+ that.r +','+ (that.r + yOffset)  +')';
     }
-    
+
     renderMax(parentSvg) {
         return parentSvg.append("text").attr("transform", this.centerTextTranslation(this.currentFontSize + 22))
             .attr("text-anchor", "middle").style("font-family", "Helvetica").text(this.max);
     }
-    
+
     renderMin(parentSvg) {
         return parentSvg.append("text").attr("transform", this.centerTextTranslation(this.currentFontSize + 44))
             .attr("text-anchor", "middle").style("font-family", "Helvetica").text(this.min);

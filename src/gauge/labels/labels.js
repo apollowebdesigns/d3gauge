@@ -20,7 +20,7 @@ module.exports = class Labels {
     }
 
     createScale(config) {
-        return d3.scale.linear()
+        return d3.scaleLinear()
             .range([0,1])
             .domain([config.minValue, config.maxValue]);
     }
@@ -65,7 +65,7 @@ module.exports = class Labels {
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
 
-        let newScale = d3.scale.linear()
+        let newScale = d3.scaleLinear()
             .range([0,1]).domain([0, newMax]);
 
         let newTicks = newScale.ticks(newMax);
@@ -73,7 +73,7 @@ module.exports = class Labels {
         let tickDataObject = {
             past: that.ticks,
             future: newTicks
-        }
+        };
 
         // d3.interpolate(that.lg, newLabs());
         //

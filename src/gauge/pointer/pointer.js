@@ -28,7 +28,7 @@ module.exports = class Pointer {
     }
 
     makePointerLine() {
-        return d3.svg.line().interpolate('monotone');
+        return d3.line().curve(d3.curveMonotoneX);
     }
 
     addArcToSvgParent(parentSvg) {
@@ -58,7 +58,7 @@ module.exports = class Pointer {
     }
 
     createScale(config) {
-        return d3.scale.linear()
+        return d3.scaleLinear()
             .range([0,1])
             .domain([config.minValue, config.maxValue]);
     }
@@ -68,9 +68,9 @@ module.exports = class Pointer {
         const newAngle = this.config.minAngle + (ratio * this.range);
         this.pointer.transition()
             .duration(this.config.transitionMs)
-            .ease('elastic')
+            .ease(d3.easeElastic)
             .attr('transform', 'rotate(' + newAngle +')');
 
         this.current.transition().text(this.rounder(newValue));
     }
-}
+};
