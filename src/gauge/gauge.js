@@ -62,6 +62,7 @@ module.exports = class Gauge {
         this.redBar = (30 / 360) * 2 * Math.PI;
         this.orangeBar = (15 / 360) * 2 * Math.PI;
         this.changeTextColor = false;
+        this.formatTicks = d3.format('.0f');
     }
 
     deg2rad(deg) {
@@ -73,15 +74,15 @@ module.exports = class Gauge {
     }
 
     newAngle(d) {
-        var that = this;
-        var ratio = that.scale(d);
-        var newAng = that.config.minAngle + (ratio * that.range);
+        let that = this;
+        let ratio = that.scale(d);
+        let newAng = that.config.minAngle + (ratio * that.range);
         return newAng;
     }
 
     configure(configuration) {
-        var that = this;
-        var prop = undefined;
+        let that = this;
+        let prop = undefined;
         for ( prop in configuration ) {
             this.config[prop] = configuration[prop];
         }
@@ -102,22 +103,22 @@ module.exports = class Gauge {
             .innerRadius(that.r - that.config.ringWidth - that.config.ringInset)
             .outerRadius(that.r - that.config.ringInset)
             .startAngle(function(d, i) {
-                var ratio = d * i;
+                let ratio = d * i;
                 return that.deg2rad(that.config.minAngle);
             })
             .endAngle(function(d, i) {
-                var ratio = d * (i+1);
+                let ratio = d * (i+1);
                 return that.deg2rad(that.config.maxAngle);
             });
     }
 
     centerTranslation() {
-        var that = this;
+        let that = this;
         return 'translate('+ that.r +','+ that.r +')';
     }
 
     isRendered() {
-        var that = this;
+        let that = this;
         return (that.svg !== undefined);
     }
 
@@ -135,7 +136,7 @@ module.exports = class Gauge {
     }
 
     render(newValue) {
-        var that = this;
+        let that = this;
         that.svg = d3.select(that.container)
             .append('svg:svg')
             .attr('class', 'Gauge')

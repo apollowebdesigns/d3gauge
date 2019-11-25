@@ -23,7 +23,7 @@ module.exports = class Pointer {
     }
 
     centerTranslation() {
-        var that = this;
+        let that = this;
         return 'translate('+ that.r +','+ that.r +')';
     }
 
@@ -32,7 +32,7 @@ module.exports = class Pointer {
     }
 
     addArcToSvgParent(parentSvg) {
-        var lineData = [ [this.config.pointerWidth / 2, 0],
+        let lineData = [ [this.config.pointerWidth / 2, 0],
             [0, -this.pointerHeadLength],
             [-(this.config.pointerWidth / 2), 0],
             [0, this.config.pointerTailLength],
@@ -48,7 +48,7 @@ module.exports = class Pointer {
     }
 
     centerTextTranslation(yOffset) {
-        var that = this;
+        let that = this;
         return 'translate('+ that.r +','+ (that.r + yOffset)  +')';
     }
 

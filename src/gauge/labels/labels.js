@@ -3,6 +3,10 @@ const d3 = require('d3');
 module.exports = class Labels {
     constructor (parentSvg, config, ticks){
         this.parentSvg = parentSvg;
+        // values to handle the labels that need to be deleted!
+        this.oldTicks = [];
+        this.rejects = [];
+
         this.min = config.minValue;
         this.max = config.maxValue;
         this.lg = undefined;
@@ -15,7 +19,7 @@ module.exports = class Labels {
     }
 
     centerTranslation() {
-        var that = this;
+        let that = this;
         return 'translate('+ that.r +','+ that.r +')';
     }
 
@@ -27,39 +31,40 @@ module.exports = class Labels {
 
     createLabelArc(parentSvg, config, ticks) {
         const that = this;
-        var centerTx = that.centerTranslation();
+        let centerTx = that.centerTranslation();
         this.lg = parentSvg.append('g')
             .attr('class', 'label')
             .attr('transform', centerTx);
-        return this.lg.selectAll('text')
+        console.log(ticks);
+        return this.createLabels(config, ticks);
+    }
+
+    createLabels(config, ticks) {
+        const that = this;
+        return that.lg.selectAll('text')
             .data(ticks)
             .enter().append('text')
             .attr('class', 'label-text')
             .attr('transform', function(d) {
-                var ratio = that.scale(d);
-                var newAngle = config.minAngle + (ratio * that.range);
+                let ratio = that.scale(d);
+                let newAngle = config.minAngle + (ratio * that.range);
                 return 'rotate(' + newAngle +') translate(0,' +(config.labelInset - that.r) +')';
             })
             .text(that.config.labelFormat);
     }
 
     convertScaleToRadians(value) {
-        var segmentOffset = 45;
-        var offset = 5;
-        var gaugeCustomDeg = 20;
-        var test = value - offset;
+        let segmentOffset = 45;
+        let offset = 5;
+        let gaugeCustomDeg = 20;
+        let test = value - offset;
         test /= gaugeCustomDeg;
         return test * (this.config.maxAngle / segmentOffset) * Math.PI;
     }
 
-    removeLabels() {
-        this.parentSvg
-            .selectAll(".label-text")
-            .remove('text')
-    }
 
-    update(newMax, newMin) {
-        var that = this;
+    async update(newMax, newMin) {
+        let that = this;
 
         function random(min, max){
             return Math.floor(Math.random() * (max - min + 1) + min);
@@ -70,77 +75,57 @@ module.exports = class Labels {
 
         let newTicks = newScale.ticks(newMax);
 
-        let tickDataObject = {
-            past: that.ticks,
-            future: newTicks
-        };
+        that.rejects = that.oldTicks.filter( ( el ) => !newTicks.includes( el ) );
+        console.log('what are the rejects?');
+        console.log(that.rejects);
 
-        // d3.interpolate(that.lg, newLabs());
-        //
-        //
-        // function newLabs() {
-        //     that.removeLabels();
-        //     that.scale = that.createScale({
-        //         minValue: 0,
-        //         maxValue: newMax
-        //     })
-        //     that.createLabelArc(that.parentSvg, that.config, newTicks);
-        // }
-
-        let ticksToUse;
-
-        if(Math.max(...newTicks) > Math.max(...that.ticks)) {
-            ticksToUse = newTicks;
-            this.parentSvg.selectAll(".label-text")
-        }
-
-        let newRange = newMax - this.config.minAngle;
-
-        console.log('new ticks are');
-        console.log(this.parentSvg.selectAll(".label-text"));
-        console.log('what are the new ticks?');
-        console.log(newTicks);
-
-        // if new value greater than origional, append new blank text until the new value is reached
-
-
-        this.parentSvg.selectAll(".label-text")
+        // if new value greater than original, append new blank text until the new value is reached
+        that.createLabels(that.config, newTicks);
+        // TODO factor this out to make it's own function
+        await that.parentSvg.selectAll(".label-text")
             .data(newTicks)
-            // .append('text')
             .transition()
             .duration(1000)
             // d is the amount of text elements
             .attr("transform", function(d) {
-                var ratio = newScale(d);
-                var newAngle = that.config.minAngle + (ratio * that.range);
+                let ratio = newScale(d);
+                let newAngle = that.config.minAngle + (ratio * that.range);
                 console.log('what is d?');
                 console.log(d);
                 return 'rotate(' + newAngle +') translate(0,' +(that.config.labelInset - that.r) +')';
             })
             .attr("visibility", function(d) {
+                console.log('isnthewhroiehw rwe');
+                console.log(d);
+                console.log(newMax);
                 if (d > newMax) {
                     return 'hidden';
                 }
                 return 'visible';
             })
-            .text(that.config.labelFormat);
+            .text(that.config.labelFormat)
+            .end();
 
-        // that.scale.range([0,1]).domain([0, newMax]);
-        // this.parentSvg.selectAll(".label-text")
-        //     .transition()
-        //     .call(that.scale)
-
-        // function labelTween(transition, newScale) {
-        //     return transition.attrTween("transform", function (d) {
-        //         // Todo change start and end angles to start and end labels
-        //         console.log('what is d?');
-        //         console.log(d);
-        //         var interpolate = d3.interpolate(that.scale, newScale);
-        //         return function (t) {
-        //             d = interpolate(t);
-        //             return that.createLabelArc(that.parentSvg, that.config, d);
-        //         };
-        //     });
-        // }
+        that.removeOldLabels(that, newMax);
+        that.oldTicks = newTicks
     }
-}
+
+    async removeOldLabels(that, newMax) {
+        return await that.parentSvg.selectAll(".label-text")
+            .data(that.oldTicks)
+            // .append('text')
+            .transition()
+            .duration(200)
+            .attr("visibility", function(d) {
+                console.log('removing rejects');
+                console.log(d);
+                console.log(newMax);
+                if (that.rejects.includes(d)) {
+                    return 'hidden';
+                }
+                return 'visible';
+            })
+            .text(that.config.labelFormat)
+            .end();
+    }
+};

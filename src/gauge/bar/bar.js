@@ -30,7 +30,7 @@ module.exports = class Bar {
     }
 
     centerTranslation() {
-        var that = this;
+        let that = this;
         return 'translate('+ that.r +','+ that.r +')';
     }
 
@@ -52,16 +52,16 @@ module.exports = class Bar {
     }
 
     convertScaleToRadians(value) {
-        var segmentOffset = 45;
-        var offset = 5;
-        var gaugeCustomDeg = 20;
-        var test = value - offset;
+        let segmentOffset = 45;
+        let offset = 5;
+        let gaugeCustomDeg = 20;
+        let test = value - offset;
         test /= gaugeCustomDeg;
         return test * (this.config.maxAngle / segmentOffset) * Math.PI;
     }
 
     centerTextTranslation(yOffset) {
-        var that = this;
+        let that = this;
         return 'translate('+ that.r +','+ (that.r + yOffset)  +')';
     }
 
@@ -79,7 +79,7 @@ module.exports = class Bar {
         let that = this;
         let numPiEnd = this.convertScaleToRadians(newMax);// Get value
         let numPiStart = this.convertScaleToRadians(newMin);// Get value
-        // var start = numPiEnd - 2;
+        // let start = numPiEnd - 2;
         let diff = Math.abs(numPiEnd) - Math.abs(numPiStart);
         let startAndEnd = {
             start: numPiStart,
@@ -126,8 +126,8 @@ module.exports = class Bar {
 
         function aTween(transition, newAngle) {
             return transition.attrTween("d", function (d) {
-                var startInterpolate = d3.interpolate(d.startAngle, newAngle.start);
-                var endInterpolate = d3.interpolate(d.endAngle, newAngle.end);
+                let startInterpolate = d3.interpolate(d.startAngle, newAngle.start);
+                let endInterpolate = d3.interpolate(d.endAngle, newAngle.end);
                 return function (t) {
                     d.startAngle = startInterpolate(t);
                     d.endAngle = endInterpolate(t);
