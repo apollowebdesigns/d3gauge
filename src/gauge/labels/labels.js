@@ -1,7 +1,7 @@
 const d3 = require('d3');
 
 module.exports = class Labels {
-    constructor (parentSvg, config, ticks){
+    constructor(parentSvg, config, ticks) {
         this.parentSvg = parentSvg;
         // values to handle the labels that need to be deleted!
         this.oldTicks = [];
@@ -20,12 +20,12 @@ module.exports = class Labels {
 
     centerTranslation() {
         let that = this;
-        return 'translate('+ that.r +','+ that.r +')';
+        return 'translate(' + that.r + ',' + that.r + ')';
     }
 
     createScale(config) {
         return d3.scaleLinear()
-            .range([0,1])
+            .range([0, 1])
             .domain([config.minValue, config.maxValue]);
     }
 
@@ -45,10 +45,10 @@ module.exports = class Labels {
             .data(ticks)
             .enter().append('text')
             .attr('class', 'label-text')
-            .attr('transform', function(d) {
+            .attr('transform', function (d) {
                 let ratio = that.scale(d);
                 let newAngle = config.minAngle + (ratio * that.range);
-                return 'rotate(' + newAngle +') translate(0,' +(config.labelInset - that.r) +')';
+                return 'rotate(' + newAngle + ') translate(0,' + (config.labelInset - that.r) + ')';
             })
             .text(that.config.labelFormat);
     }
@@ -66,38 +66,40 @@ module.exports = class Labels {
     async update(newMax, newMin) {
         let that = this;
 
-        function random(min, max){
+        function random(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
 
         let newScale = d3.scaleLinear()
-            .range([0,1]).domain([0, newMax]);
+            .range([0, 1]).domain([0, newMax]);
 
         let newTicks = newScale.ticks(newMax);
 
-        that.rejects = that.oldTicks.filter( ( el ) => !newTicks.includes( el ) );
+        that.rejects = that.oldTicks.filter((el) => !newTicks.includes(el));
         console.log('what are the rejects?');
         console.log(that.rejects);
 
         // if new value greater than original, append new blank text until the new value is reached
         that.createLabels(that.config, newTicks);
         // TODO factor this out to make it's own function
-        await that.parentSvg.selectAll(".label-text")
+        await that.moveCurrentLabels(that, newMax, newScale, newTicks);
+
+        that.removeOldLabels(that, newMax);
+        that.oldTicks = newTicks
+    }
+
+    async moveCurrentLabels(that, newMax, newScale, newTicks) {
+        return await that.parentSvg.selectAll(".label-text")
             .data(newTicks)
             .transition()
             .duration(1000)
             // d is the amount of text elements
-            .attr("transform", function(d) {
+            .attr("transform", function (d) {
                 let ratio = newScale(d);
                 let newAngle = that.config.minAngle + (ratio * that.range);
-                console.log('what is d?');
-                console.log(d);
-                return 'rotate(' + newAngle +') translate(0,' +(that.config.labelInset - that.r) +')';
+                return 'rotate(' + newAngle + ') translate(0,' + (that.config.labelInset - that.r) + ')';
             })
-            .attr("visibility", function(d) {
-                console.log('isnthewhroiehw rwe');
-                console.log(d);
-                console.log(newMax);
+            .attr("visibility", function (d) {
                 if (d > newMax) {
                     return 'hidden';
                 }
@@ -105,18 +107,14 @@ module.exports = class Labels {
             })
             .text(that.config.labelFormat)
             .end();
-
-        that.removeOldLabels(that, newMax);
-        that.oldTicks = newTicks
     }
 
     async removeOldLabels(that, newMax) {
         return await that.parentSvg.selectAll(".label-text")
             .data(that.oldTicks)
-            // .append('text')
             .transition()
             .duration(200)
-            .attr("visibility", function(d) {
+            .attr("visibility", function (d) {
                 console.log('removing rejects');
                 console.log(d);
                 console.log(newMax);

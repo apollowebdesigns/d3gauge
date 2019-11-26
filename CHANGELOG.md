@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.7](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.6...v1.3.7) (2019-11-26)
 
+Small label code refactor in the labels to make the code more readable.
+
 ### [1.3.6](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.5...v1.3.6) (2019-11-26)
 
 Fixed up the `npm package.json`
