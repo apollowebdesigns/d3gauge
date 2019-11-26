@@ -6,7 +6,7 @@
     "test": "jest",
     "component-test": "node --experimental-worker node_modules/cucumber/bin/cucumber-js",
     "release": "standard-version",
-    "deploy": "git push --follow-tags origin master && npm publish"
+    "deploy": "git add --all; git commit -m \"CHANGELOG updated\"; git push --follow-tags origin master && npm publish"
   },
   "author": "",
   "license": "ISC",
