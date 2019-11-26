@@ -1,11 +1,12 @@
 {
   "name": "d3-speedo-gauge",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "jest",
     "component-test": "node --experimental-worker node_modules/cucumber/bin/cucumber-js",
-    "release": "standard-version; git push --follow-tags origin master && npm publish"
+    "release": "standard-version",
+    "deploy": "git push --follow-tags origin master && npm publish"
   },
   "author": "",
   "license": "ISC",
