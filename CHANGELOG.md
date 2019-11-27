@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.8](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.7...v1.3.8) (2019-11-27)
 
+Added more content to the readme to explain how to use with a better example.
+
 ### [1.3.7](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.6...v1.3.7) (2019-11-26)
 
 Small label code refactor in the labels to make the code more readable.

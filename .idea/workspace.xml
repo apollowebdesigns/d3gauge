@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="784819ad-2fa6-4a80-a465-629c54eee0cf" name="Default Changelist" comment="fixed version and bar text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gauge/labels/labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/labels/labels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/gauge.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/gauge.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/gauge.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/gauge.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,11 +127,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.component-test" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.release" />
-        <item itemvalue="npm.component-test" />
-        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +198,10 @@
       <workItem from="1572376053733" duration="1712000" />
       <workItem from="1573765385931" duration="45000" />
       <workItem from="1574712590313" duration="4781000" />
-      <workItem from="1574749317762" duration="1259000" />
+      <workItem from="1574749317762" duration="1525000" />
+      <workItem from="1574795194946" duration="9000" />
+      <workItem from="1574887658581" duration="159000" />
+      <workItem from="1574889634165" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="added more stuff">
       <created>1542578339162</created>
