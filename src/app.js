@@ -1,18 +1,34 @@
 const Gauge = require('./gauge/gauge');
 const d3 = require('d3');
 
-onDocumentReady();
+const powerGaugeConfig = {
+    size: 300,
+    clipWidth: 300,
+    clipHeight: 300,
+    ringWidth: 20,
+    maxValue: 10,
+    transitionMs: 4000,
+};
 
-function onDocumentReady() {
+const directionGaugeConfig = {
+    size: 300,
+    clipWidth: 300,
+    clipHeight: 300,
+    ringWidth: 20,
+    maxValue: 360,
+    majorTicks: 12,
+    minAngle: -180,
+    maxAngle: 180,
+    transitionMs: 4000,
+};
+
+
+createGauge('#power-gauge', powerGaugeConfig);
+createGauge('#direction-gauge', directionGaugeConfig);
+
+function createGauge(id, config) {
     let flag = false;
-    let powerGauge = new Gauge('#power-Gauge', {
-        size: 300,
-        clipWidth: 300,
-        clipHeight: 300,
-        ringWidth: 20,
-        maxValue: 10,
-        transitionMs: 4000,
-    });
+    let powerGauge = new Gauge(id, config);
     powerGauge.render();
 
     function updateReadings() {

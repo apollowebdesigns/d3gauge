@@ -4,6 +4,10 @@ A simple gauge that uses d3.
 
 You can have maximum and minimum values stored in this gauge.
 
+The gauge can autoscale.
+
+To see the gauge in action, download the repo, npm install, then run it locally with webpack to see what it looks like.
+
 ## Example gauge
 
 ![an example gauge image not here](gaugeexample.png)
