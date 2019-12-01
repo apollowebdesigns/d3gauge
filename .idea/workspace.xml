@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="784819ad-2fa6-4a80-a465-629c54eee0cf" name="Default Changelist" comment="fixed version and bar text">
+      <change afterPath="$PROJECT_DIR$/tests/labels.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gauge/bar/bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/bar/bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gauge/gauge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/gauge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gauge/labels/labels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/labels/labels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gauge/pointer/pointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/pointer/pointer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.component-test">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="component-test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -127,11 +122,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.component-test" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.release" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.component-test" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +199,8 @@
       <workItem from="1574889634165" duration="1539000" />
       <workItem from="1574960174847" duration="160000" />
       <workItem from="1575062693692" duration="262000" />
-      <workItem from="1575112500732" duration="1695000" />
+      <workItem from="1575112500732" duration="1947000" />
+      <workItem from="1575218853297" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="added more stuff">
       <created>1542578339162</created>
