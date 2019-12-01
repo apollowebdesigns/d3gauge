@@ -20,6 +20,7 @@ const directionGaugeConfig = {
     minAngle: -180,
     maxAngle: 180,
     transitionMs: 4000,
+    isCyclic: true
 };
 
 

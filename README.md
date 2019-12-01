@@ -53,6 +53,9 @@ gauge.render();
             majorTicks: 10,
             labelFormat: d3.format(',g'),
             labelInset: 10,
+            // sets whether values when they overflow from maximum should be
+            // snapped back to maximum or go back around from the start
+            isCyclic: false,
 
             arcColorFn: d3.interpolateHsl(d3.rgb('#e8e2ca'), d3.rgb('#3e6c0a'))
 }

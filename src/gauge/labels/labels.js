@@ -76,12 +76,9 @@ module.exports = class Labels {
         let newTicks = newScale.ticks(newMax);
 
         that.rejects = that.oldTicks.filter((el) => !newTicks.includes(el));
-        console.log('what are the rejects?');
-        console.log(that.rejects);
 
         // if new value greater than original, append new blank text until the new value is reached
         that.createLabels(that.config, newTicks);
-        // TODO factor this out to make it's own function
         await that.moveCurrentLabels(that, newMax, newScale, newTicks);
 
         that.removeOldLabels(that, newMax);
@@ -89,17 +86,17 @@ module.exports = class Labels {
     }
 
     async moveCurrentLabels(that, newMax, newScale, newTicks) {
-        return await that.parentSvg.selectAll(".label-text")
+        return await that.parentSvg.selectAll('.label-text')
             .data(newTicks)
             .transition()
             .duration(1000)
             // d is the amount of text elements
-            .attr("transform", function (d) {
+            .attr('transform', function (d) {
                 let ratio = newScale(d);
                 let newAngle = that.config.minAngle + (ratio * that.range);
                 return 'rotate(' + newAngle + ') translate(0,' + (that.config.labelInset - that.r) + ')';
             })
-            .attr("visibility", function (d) {
+            .attr('visibility', function (d) {
                 if (d > newMax) {
                     return 'hidden';
                 }
@@ -110,14 +107,11 @@ module.exports = class Labels {
     }
 
     async removeOldLabels(that, newMax) {
-        return await that.parentSvg.selectAll(".label-text")
+        return await that.parentSvg.selectAll('.label-text')
             .data(that.oldTicks)
             .transition()
             .duration(200)
-            .attr("visibility", function (d) {
-                console.log('removing rejects');
-                console.log(d);
-                console.log(newMax);
+            .attr('visibility', function (d) {
                 if (that.rejects.includes(d)) {
                     return 'hidden';
                 }

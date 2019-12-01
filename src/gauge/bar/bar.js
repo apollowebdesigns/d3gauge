@@ -38,13 +38,13 @@ module.exports = class Bar {
         return parentSvg.append('g')
             .attr('class', 'arc')
             .attr('transform', this.centerTranslation())
-            .append("path")
+            .append('path')
             .datum({
                 startAngle: -90 * (Math.PI / 180),
                 endAngle: -90 * (Math.PI / 180)
             })
-            .style("fill", 'red')
-            .attr("d", this.barArc);
+            .style('fill', 'red')
+            .attr('d', this.barArc);
     }
 
     rounder(numb) {
@@ -66,13 +66,13 @@ module.exports = class Bar {
     }
 
     renderMax(parentSvg) {
-        return parentSvg.append("text").attr("transform", this.centerTextTranslation(this.currentFontSize + 22))
-            .attr("text-anchor", "middle").style("font-family", "Helvetica").text(this.max);
+        return parentSvg.append('text').attr('transform', this.centerTextTranslation(this.currentFontSize + 22))
+            .attr('text-anchor', 'middle').style('font-family', 'Helvetica').text(this.max);
     }
 
     renderMin(parentSvg) {
-        return parentSvg.append("text").attr("transform", this.centerTextTranslation(this.currentFontSize + 44))
-            .attr("text-anchor", "middle").style("font-family", "Helvetica").text(this.min);
+        return parentSvg.append('text').attr('transform', this.centerTextTranslation(this.currentFontSize + 44))
+            .attr('text-anchor', 'middle').style('font-family', 'Helvetica').text(this.min);
     }
 
     update(newMax, newMin) {
@@ -94,27 +94,27 @@ module.exports = class Bar {
         }
 
         if (that.changeTextColor) {
-            that.min.transition().duration(750).styleTween("fill", function () {
+            that.min.transition().duration(750).styleTween('fill', function () {
                 return d3.interpolate(that.new_color, that.cur_color);
-            }).text("MIN: " + that.rounder(newMin));
+            }).text('MIN: ' + that.rounder(newMin));
 
-            that.max.transition().duration(750).styleTween("fill", function () {
+            that.max.transition().duration(750).styleTween('fill', function () {
                 return d3.interpolate(that.new_color, that.cur_color);
-            }).text("MAX: " + that.rounder(newMax));
+            }).text('MAX: ' + that.rounder(newMax));
         } else {
             let chanceColor = Math.random() * 10;
             that.new_text_color = chanceColor > 5 ? 'grey': 'black';
-            that.min.transition().duration(750).styleTween("fill", function () {
+            that.min.transition().duration(750).styleTween('fill', function () {
                 return d3.interpolate(that.new_text_color, that.cur_text_color);
-            }).text("MIN: " + that.rounder(newMin));
+            }).text('MIN: ' + that.rounder(newMin));
 
-            that.max.transition().duration(750).styleTween("fill", function () {
+            that.max.transition().duration(750).styleTween('fill', function () {
                 return d3.interpolate(that.new_text_color, that.cur_text_color);
-            }).text("MAX: " + that.rounder(newMax));
+            }).text('MAX: ' + that.rounder(newMax));
         }
 
 
-        that.svgRenderedArc.transition().duration(750).styleTween("fill", function () {
+        that.svgRenderedArc.transition().duration(750).styleTween('fill', function () {
             return d3.interpolate(that.new_color, that.cur_color);
         }).call(aTween, startAndEnd);
         // Set colors for next transition
@@ -125,7 +125,7 @@ module.exports = class Bar {
         that.new_text_color = that.hold_text;
 
         function aTween(transition, newAngle) {
-            return transition.attrTween("d", function (d) {
+            return transition.attrTween('d', function (d) {
                 let startInterpolate = d3.interpolate(d.startAngle, newAngle.start);
                 let endInterpolate = d3.interpolate(d.endAngle, newAngle.end);
                 return function (t) {

@@ -1,7 +1,7 @@
 const d3 = require('d3');
 const Bar = require('./bar/bar');
-const Pointer = require("./pointer/pointer");
-const Labels = require("./labels/labels");
+const Pointer = require('./pointer/pointer');
+const Labels = require('./labels/labels');
 
 module.exports = class Gauge {
     constructor (container, configuration){
@@ -27,6 +27,7 @@ module.exports = class Gauge {
             majorTicks					: 10,
             labelFormat					: d3.format(',g'),
             labelInset					: 10,
+            isCyclic                    : false,
 
             arcColorFn					: d3.interpolateHsl(d3.rgb('#e8e2ca'), d3.rgb('#3e6c0a'))
         };
@@ -126,13 +127,13 @@ module.exports = class Gauge {
         return parentSvg.append('g')
             .attr('class', 'arc')
             .attr('transform', this.centerTranslation())
-            .append("path")
+            .append('path')
             .datum({
                 startAngle: -90 * (Math.PI / 180),
                 endAngle: -90 * (Math.PI / 180)
             })
-            .style("fill", 'red')
-            .attr("d", this.arc);
+            .style('fill', 'red')
+            .attr('d', this.arc);
     }
 
     render(newValue) {

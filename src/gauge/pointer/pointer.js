@@ -53,8 +53,8 @@ module.exports = class Pointer {
     }
 
     renderCurrent(parentSvg) {
-        return parentSvg.append("text").attr("transform", this.centerTextTranslation(this.currentFontSize))
-            .attr("text-anchor", "middle").style("font-size", this.currentFontSize).style("font-family", "Helvetica").text(this.current);
+        return parentSvg.append('text').attr('transform', this.centerTextTranslation(this.currentFontSize))
+            .attr('text-anchor', 'middle').style('font-size', this.currentFontSize).style('font-family', 'Helvetica').text(this.current);
     }
 
     createScale(config) {
@@ -63,9 +63,19 @@ module.exports = class Pointer {
             .domain([config.minValue, config.maxValue]);
     }
 
+    applyOverflowTransform(config, newValue) {
+        return config.isCyclic ? config.maxValue : newValue - config.maxValue
+    }
+
     update(newValue) {
+        if (newValue > this.config.maxValue) {
+            newValue = this.applyOverflowTransform(this.config, newValue);
+        }
         const ratio = this.scale(newValue);
         const newAngle = this.config.minAngle + (ratio * this.range);
+        console.log('what is the new pointer angle?');
+        console.log(newValue);
+        console.log(this.config.maxAngle);
         this.pointer.transition()
             .duration(this.config.transitionMs)
             .ease(d3.easeElastic)
