@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.10](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.9...v1.3.10) (2019-12-01)
 
+Added more jest tests to improve the coverage report.
+
 ### [1.3.9](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.8...v1.3.9) (2019-12-01)
 
 Added in changes to the pointer to stop overflow values happening with the scale.
