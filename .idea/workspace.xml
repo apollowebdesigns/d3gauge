@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="784819ad-2fa6-4a80-a465-629c54eee0cf" name="Default Changelist" comment="fixed version and bar text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/gauge.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/gauge.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/bar.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/bar.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/gauge.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/gauge.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/labels.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/labels.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/pointer.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/pointer.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +29,11 @@
   </component>
   <component name="ProjectId" id="1SmkUNKBpDnUFPHr6u5wm3ykDXk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -51,56 +62,15 @@
       <recent name="$PROJECT_DIR$/dist" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="npm.test">
-    <configuration name="convert degrees to radians" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="component-test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="component-test" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/gauge.spec.js" />
-      <test-names>
-        <test-name value="convert degrees to radians" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="get new angle" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/gauge.spec.js" />
-      <test-names>
-        <test-name value="get new angle" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="render" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/gauge.spec.js" />
-      <test-names>
-        <test-name value="render" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -108,6 +78,26 @@
       <command value="run" />
       <scripts>
         <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="release" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="release" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -125,20 +115,32 @@
     </configuration>
     <list>
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.release" />
       <item itemvalue="npm.deploy" />
-      <item itemvalue="Jest.convert degrees to radians" />
-      <item itemvalue="Jest.get new angle" />
-      <item itemvalue="Jest.render" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.component-test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.release" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Jest.render" />
-        <item itemvalue="Jest.get new angle" />
-        <item itemvalue="Jest.convert degrees to radians" />
+        <item itemvalue="npm.component-test" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -210,7 +212,16 @@
       <workItem from="1574960174847" duration="160000" />
       <workItem from="1575062693692" duration="262000" />
       <workItem from="1575112500732" duration="1947000" />
-      <workItem from="1575218853297" duration="1073000" />
+      <workItem from="1575218853297" duration="1745000" />
+      <workItem from="1575227521346" duration="450000" />
+      <workItem from="1575403684771" duration="149000" />
+      <workItem from="1575407764070" duration="226000" />
+      <workItem from="1575717911477" duration="553000" />
+      <workItem from="1575718519678" duration="76000" />
+      <workItem from="1575718614558" duration="100000" />
+      <workItem from="1575718730965" duration="108000" />
+      <workItem from="1575718863367" duration="709000" />
+      <workItem from="1575796651087" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="added more stuff">
       <created>1542578339162</created>
@@ -400,5 +411,27 @@
     <MESSAGE value="fixed version and bar text" />
     <MESSAGE value="fixing a bit in the readme" />
     <option name="LAST_COMMIT_MESSAGE" value="fixing a bit in the readme" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1379" height="151" key="GridCell.Tab.0.bottom" timestamp="1575921972240">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1379" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1575921972240" />
+    <state width="1379" height="151" key="GridCell.Tab.0.center" timestamp="1575921972238">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1379" height="151" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1575921972238" />
+    <state width="1379" height="151" key="GridCell.Tab.0.left" timestamp="1575921972238">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1379" height="151" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1575921972238" />
+    <state width="1379" height="151" key="GridCell.Tab.0.right" timestamp="1575921972239">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1379" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1575921972239" />
+    <state x="229" y="77" key="SettingsEditor" timestamp="1575718839028">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="229" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1575718839028" />
   </component>
 </project>

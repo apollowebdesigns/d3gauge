@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.11](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.10...v1.3.11) (2019-12-09)
 
+Fixed up vulnerabilities.
+
 ### [1.3.10](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.9...v1.3.10) (2019-12-01)
 
 Added more jest tests to improve the coverage report.
