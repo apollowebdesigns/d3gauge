@@ -75,10 +75,24 @@ module.exports = class Bar {
             .attr('text-anchor', 'middle').style('font-family', 'Helvetica').text(this.min);
     }
 
+    applyMaxOverflowTransform(config, newValue) {
+        return config.isCyclic ? config.maxValue : newValue - config.maxValue
+    }
+
+    applyMinOverflowTransform(config, newValue) {
+        return config.isCyclic ? config.minValue : newValue + config.maxValue
+    }
+
     update(newMax, newMin) {
         let that = this;
-        let numPiEnd = this.convertScaleToRadians(newMax);// Get value
-        let numPiStart = this.convertScaleToRadians(newMin);// Get value
+        let numPiEnd = this.convertScaleToRadians(newMax);
+        if (numPiEnd > this.config.maxValue) {
+            numPiEnd = this.applyMaxOverflowTransform(this.config, numPiEnd);
+        }
+        let numPiStart = this.convertScaleToRadians(newMin);
+        if (numPiStart > this.config.minValue) {
+            numPiStart = this.applyMinOverflowTransform(this.config, numPiStart);
+        }
         // let start = numPiEnd - 2;
         let diff = Math.abs(numPiEnd) - Math.abs(numPiStart);
         let startAndEnd = {

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.12](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.11...v1.3.12) (2019-12-29)
 
+Fixed security vulnerability in dependency - serialize-javascript
+
 ### [1.3.11](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.10...v1.3.11) (2019-12-09)
 
 Fixed up vulnerabilities.
