@@ -1,5 +1,5 @@
 TN:
-SF:/Users/andrewevans/Documents/Programming/JavaScript/d3gauge/src/gauge/gauge.js
+SF:src/gauge/gauge.js
 FN:7,(anonymous_0)
 FN:69,(anonymous_1)
 FN:73,(anonymous_2)
@@ -106,7 +106,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrewevans/Documents/Programming/JavaScript/d3gauge/src/gauge/bar/bar.js
+SF:src/gauge/bar/bar.js
 FN:4,(anonymous_0)
 FN:26,(anonymous_1)
 FN:32,(anonymous_2)
@@ -248,7 +248,7 @@ BRF:16
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrewevans/Documents/Programming/JavaScript/d3gauge/src/gauge/labels/labels.js
+SF:src/gauge/labels/labels.js
 FN:4,(anonymous_0)
 FN:21,(anonymous_1)
 FN:26,(anonymous_2)
@@ -344,7 +344,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:/Users/andrewevans/Documents/Programming/JavaScript/d3gauge/src/gauge/pointer/pointer.js
+SF:src/gauge/pointer/pointer.js
 FN:4,(anonymous_0)
 FN:25,(anonymous_1)
 FN:30,(anonymous_2)

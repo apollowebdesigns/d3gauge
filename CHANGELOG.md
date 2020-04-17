@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.15](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.14...v1.3.15) (2020-04-17)
 
+Fixed more bugs and added update for some npm packages.
+
 ### [1.3.14](https://github.com/apollowebdesigns/d3gauge/compare/v1.3.13...v1.3.14) (2020-04-17)
 
 Added in security fixes for long overdue bugs.

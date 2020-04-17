@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="784819ad-2fa6-4a80-a465-629c54eee0cf" name="Default Changelist" comment="fixed version and bar text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/bar.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/bar.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/bar/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/gauge.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/gauge.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/labels.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/labels/labels.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/pointer.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/gauge/pointer/pointer.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gauge/bar/bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gauge/bar/bar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,10 +116,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.release" />
         <item itemvalue="npm.component-test" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.release" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
@@ -233,6 +224,8 @@
       <workItem from="1576433952346" duration="216000" />
       <workItem from="1577656400519" duration="25000" />
       <workItem from="1577656446542" duration="438000" />
+      <workItem from="1581976909559" duration="208000" />
+      <workItem from="1587139712013" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="added more stuff">
       <created>1542578339162</created>
@@ -424,33 +417,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="fixing a bit in the readme" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="612" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577656409598">
-      <screen x="0" y="23" width="1920" height="995" />
+    <state width="1779" height="216" key="GridCell.Tab.0.bottom" timestamp="1587140152438">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="612" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.23.1920.1057/0.23.1920.995@0.23.1920.995" timestamp="1577656409598" />
-    <state width="1339" height="126" key="GridCell.Tab.0.bottom" timestamp="1577656898706">
-      <screen x="0" y="23" width="1920" height="995" />
+    <state width="1779" height="216" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1920.1003@-1920.23.1920.1057" timestamp="1581977116984" />
+    <state width="1779" height="216" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1920.1005@-1920.23.1920.1057" timestamp="1587140152438" />
+    <state width="1779" height="216" key="GridCell.Tab.0.center" timestamp="1587140152437">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1339" height="126" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1920.995@0.23.1920.995" timestamp="1577656898706" />
-    <state width="1379" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1575924972205" />
-    <state width="1339" height="126" key="GridCell.Tab.0.center" timestamp="1577656898705">
-      <screen x="0" y="23" width="1920" height="995" />
+    <state width="1779" height="216" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1920.1003@-1920.23.1920.1057" timestamp="1581977116983" />
+    <state width="1779" height="216" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1920.1005@-1920.23.1920.1057" timestamp="1587140152437" />
+    <state width="1779" height="216" key="GridCell.Tab.0.left" timestamp="1587140152437">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1339" height="126" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1920.995@0.23.1920.995" timestamp="1577656898705" />
-    <state width="1379" height="151" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1575924972205" />
-    <state width="1339" height="126" key="GridCell.Tab.0.left" timestamp="1577656898704">
-      <screen x="0" y="23" width="1920" height="995" />
+    <state width="1779" height="216" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1920.1003@-1920.23.1920.1057" timestamp="1581977116983" />
+    <state width="1779" height="216" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1920.1005@-1920.23.1920.1057" timestamp="1587140152437" />
+    <state width="1779" height="216" key="GridCell.Tab.0.right" timestamp="1587140152438">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state width="1339" height="126" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1920.995@0.23.1920.995" timestamp="1577656898704" />
-    <state width="1379" height="151" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1575924972204" />
-    <state width="1339" height="126" key="GridCell.Tab.0.right" timestamp="1577656898706">
-      <screen x="0" y="23" width="1920" height="995" />
-    </state>
-    <state width="1339" height="126" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1920.995@0.23.1920.995" timestamp="1577656898706" />
-    <state width="1379" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1575924972205" />
-    <state x="229" y="77" key="SettingsEditor" timestamp="1575718839028">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="229" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1575718839028" />
+    <state width="1779" height="216" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1920.1003@-1920.23.1920.1057" timestamp="1581977116983" />
+    <state width="1779" height="216" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1920.1005@-1920.23.1920.1057" timestamp="1587140152438" />
   </component>
 </project>
