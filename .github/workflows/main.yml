@@ -1,8 +1,6 @@
 name: Node.js CI
 
 on:
-  commit:
-    branches: [ $default-branch ]
   push:
     branches: [ $default-branch ]
   pull_request:
